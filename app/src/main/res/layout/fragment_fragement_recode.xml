@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FragementRecode">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/WaveImageID"
+            android:src="@drawable/sound_wave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        </ImageView>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_below="@id/WaveImageID"
+            android:id="@+id/AudioRecodingTextID"
+            android:layout_centerHorizontal="true"
+            android:text="Press the mic button\nto start recoding"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        </com.google.android.material.textview.MaterialTextView>
+
+        <Chronometer
+            android:id="@+id/chronometerID"
+            android:textSize="55sp"
+            android:layout_below="@id/AudioRecodingTextID"
+            android:layout_marginTop="65dp"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </Chronometer>
+
+        <LinearLayout
+            android:layout_below="@id/chronometerID"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+
+                <RelativeLayout
+                    android:id="@+id/MicButtonID"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_width="110dp"
+                    android:background="@drawable/mic_back_border"
+                    android:layout_height="110dp">
+
+                    <RelativeLayout
+                        android:id="@+id/RecodeBodyID"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="100dp"
+                        android:background="@drawable/mic_black_layout"
+                        android:layout_height="100dp">
+
+                        <ImageView
+                            android:id="@+id/RecodeImageID"
+                            android:layout_centerVertical="true"
+                            android:layout_centerHorizontal="true"
+                            android:src="@drawable/mic_black"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp">
+
+                        </ImageView>
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_toRightOf="@+id/MicButtonID"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:id="@+id/MusicListButtonID"
+                        android:src="@drawable/list"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp">
+
+                    </ImageView>
+
+                </RelativeLayout>
+
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</FrameLayout>

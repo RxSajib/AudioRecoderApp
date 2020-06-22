@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_grap"
+    app:startDestination="@id/fragementRecode"
+    tools:ignore="UnusedNavigation">
+
+    <fragment
+        android:id="@+id/fragementRecode"
+        android:name="com.example.audiorecoderapp.FragementRecode"
+        android:label="fragment_fragement_recode"
+        tools:layout="@layout/fragment_fragement_recode" >
+        <action
+            android:id="@+id/action_fragementRecode_to_listFragement"
+            app:destination="@id/listFragement" />
+    </fragment>
+    <fragment
+        android:id="@+id/listFragement"
+        android:name="com.example.audiorecoderapp.ListFragement"
+        android:label="_list_fragement"
+        tools:layout="@layout/_list_fragement" />
+
+
+</navigation>

@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:behavior_hideable = "true"
+    app:behavior_peekHeight ="60dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+
+    <RelativeLayout
+        android:id="@+id/headerLayout"
+        android:background="@drawable/bottomshid_header_background"
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:weightSum="2"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+
+                <RelativeLayout
+                    android:padding="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/MusicIconID"
+                        android:src="@drawable/music_icon"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp">
+                    </ImageView>
+
+                    <TextView
+                        android:layout_toRightOf="@id/MusicIconID"
+                        android:text="Media Player"
+                        android:textSize="18sp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:textColor="@android:color/white"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+
+                <RelativeLayout
+                    android:padding="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+
+
+                    <TextView
+                        android:text="Now Playing"
+                        android:textSize="18sp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="15dp"
+                        android:textColor="@android:color/white"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    </TextView>
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:background="@drawable/player_body_design"
+        android:layout_below="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/FilenameTextID"
+            android:layout_marginTop="40dp"
+            android:layout_width="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:text="File Name"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:layout_height="wrap_content">
+        </TextView>
+
+        <RelativeLayout
+            android:id="@+id/PlaycontrollerID"
+            android:layout_below="@+id/FilenameTextID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:weightSum="3"
+                android:layout_width="match_parent"
+                android:layout_height="70dp">
+
+                <RelativeLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp">
+
+                    <ImageView
+                        android:src="@drawable/right_fast_playicon"
+                        android:layout_width="35dp"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_height="35dp">
+
+                    </ImageView>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp">
+
+                    <ImageView
+                        android:src="@drawable/playicon"
+                        android:layout_width="45dp"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_height="45dp">
+
+                    </ImageView>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp">
+
+
+                    <ImageView
+                        android:src="@drawable/left_fastplay_icon"
+                        android:layout_width="35dp"
+                        android:layout_centerVertical="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_height="35dp">
+
+                    </ImageView>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_below="@+id/PlaycontrollerID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_marginRight="25dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="25dp"
+                android:layout_height="wrap_content">
+
+            </SeekBar>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
